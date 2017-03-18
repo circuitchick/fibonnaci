@@ -238,3 +238,4 @@ document.querySelector('body').appendChild(style);
 pell(9, document.querySelector('.red'))
 pell(10, document.querySelector('.blue'))
 pell(11, document.querySelector('.yellow'))
+
