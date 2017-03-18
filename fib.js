@@ -192,13 +192,6 @@ var pell = function (n, node) {
 
 document.querySelector('body').appendChild(style);
 
-( function(color, id) {
-	var div = document.createElement('div');
-	div.setAttribute('class', color + ' shadowed stuff-box');
-	div.setAttribute('id', id);
-	document.body.appendChild(div);
-}('red', 'pell'));
-
 pell(9, document.querySelector('.red'))
 pell(10, document.querySelector('.blue'))
 pell(11, document.querySelector('.yellow'))
