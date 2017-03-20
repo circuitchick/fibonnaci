@@ -1,3 +1,5 @@
+//fibonnaci code from @fadein
+//other sequences modified from fibonnaci code from @fadein
 function fibHelper(n) {
 	var value;
 	var div = document.createElement('div');
@@ -45,7 +47,7 @@ var style = document.createElement('style');
 style.textContent = 
 	"#fib {" +
 	"	display: inline-block;" +
-	"	width: 20000px;" +
+	"	width: 30000px;" +
 	"}" +
 	"" +
 	".fib {" +
@@ -54,14 +56,14 @@ style.textContent =
 	"" +
 	".fib-left {" +
 	"	float: left;" +
-	"	display: inline-block;" +
-	"	margin-right: 4px;" +
+	"	width: 40%;" +
+	"	margin-right: 6px;" +
 	"}" +
 	"" +
 	".fib-right {" +
 	"	float: right;" +
-	"	display: inline-block;" +
-	"	margin-left: 4px;" +
+	"	width: 40%;" +
+	"	margin-left: 6px;" +
 	"}" +
 	"" +
 	".shadowed {" +
@@ -116,8 +118,8 @@ document.querySelector('body').appendChild(style);
 
 fib(9, document.querySelector('.red'))
 
-var divMakerMaker = function(color, id) {
-	return function() {
+var MakeDiv = function(color, id) {
+	return function(){
 		var div = document.createElement('div');
 		div.setAttribute('class', color + ' shadowed stuff-box');
 		div.setAttribute('id', id);
@@ -125,14 +127,14 @@ var divMakerMaker = function(color, id) {
 	}
 }
 
-var blueDiv = divMakerMaker('blue', 'fib');
-var yellowDiv = divMakerMaker('yellow', 'fib');
+var blueDiv = MakeDiv('blue', 'pell');
+var yellowDiv = MakeDiv('yellow', 'trib');
 
 blueDiv();
 yellowDiv();
 
-fib(10, document.querySelector('.blue'))
-fib(11, document.querySelector('.yellow'))
+fib(10, document.querySelector('.red'))
+fib(11, document.querySelector('.red'))
 
 function pellHelper(n) {
 	var value;
@@ -181,7 +183,7 @@ var style = document.createElement('style');
 style.textContent = 
 	"#pell {" +
 	"	display: inline-block;" +
-	"	width: 20000px;" +
+	"	width: 30000px;" +
 	"}" +
 	"" +
 	".pell {" +
@@ -190,14 +192,14 @@ style.textContent =
 	"" +
 	".pell-left {" +
 	"	float: left;" +
-	"	display: inline-block;" +
-	"	margin-right: 4px;" +
+	"	width: 40%;" +
+	"	margin-right: 6px;" +
 	"}" +
 	"" +
 	".pell-right {" +
 	"	float: right;" +
-	"	display: inline-block;" +
-	"	margin-left: 4px;" +
+	"	width: 40%;" +
+	"	margin-left: 6px;" +
 	"}" +
 	"" +
 	".shadowed {" +
@@ -243,9 +245,9 @@ style.textContent =
 	
 document.querySelector('body').appendChild(style);
 
-pell(9, document.querySelector('.red'))
+pell(9, document.querySelector('.blue'))
 pell(10, document.querySelector('.blue'))
-pell(11, document.querySelector('.yellow'))
+pell(11, document.querySelector('.blue'))
 
 function TribHelper(n) {
 	var value;
@@ -253,12 +255,12 @@ function TribHelper(n) {
 	div.setAttribute("class", "trib");
 
 	// leaf nodes aka. base case
-	if (n < 4) {
-		if (n < 2) {
+	if (n < 3) {
+		if (n < 1) {
 			value = 0;
 		} 
 
-		else if (n < 4) {
+		else if (n < 3) {
 			value = 1;
 		}
 		var p = document.createElement('p');
@@ -299,7 +301,7 @@ var style = document.createElement('style');
 style.textContent = 
 	"#trib {" +
 	"	display: inline-block;" +
-	"	width: 20000px;" +
+	"	width: 30000px;" +
 	"}" +
 	"" +
 	".trib {" +
@@ -308,19 +310,19 @@ style.textContent =
 	"" +
 	".trib-left {" +
 	"	float: left;" +
-	"	display: inline-block;" +
+	"	Width: 40%;" +
 	"	margin-right: 4px;" +
 	"}" +
 	"" +
 	".trib-mid {" +
 	"	float: center;" +
-	"	display: inline-block;" +
-	"	margin-right: 4px;" +
+	"	Width: 40%;" +
+	"	margin-mid: 4px;" +
 	"}" +
 	"" +
 	".trib-right {" +
 	"	float: right;" +
-	"	display: inline-block;" +
+	"	Width: 40%;" +
 	"	margin-left: 4px;" +
 	"}" +
 	"" +
@@ -368,9 +370,6 @@ style.textContent =
 document.querySelector('body').appendChild(style);
 
 
-trib(9, document.querySelector('.red'))
-
-yellowDiv();
-
-trib(10, document.querySelector('.blue'))
+trib(9, document.querySelector('.yellow'))
+trib(10, document.querySelector('.yellow'))
 trib(11, document.querySelector('.yellow'))
