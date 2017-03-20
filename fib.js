@@ -256,7 +256,7 @@ function TribHelper(n) {
 
 	// leaf nodes aka. base case
 	if (n < 3) {
-		if (n < 1) {
+		if (n < 2) {
 			value = 0;
 		} 
 
